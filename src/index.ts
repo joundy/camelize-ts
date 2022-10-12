@@ -46,7 +46,6 @@ function processWalk(obj, fn): any {
     if (Array.isArray(obj)) return obj.map(walk);
 
     return Object.keys(obj).reduce((res, key) => {
-      // const camel = camelCase(key);
       const camel = fn(key);
       res[camel] = walk(obj[key]);
       return res;
