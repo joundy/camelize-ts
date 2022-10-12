@@ -1,7 +1,7 @@
 {
-  "name": "camelize-ts",
+  "name": "camelize-snakeize-ts",
   "version": "2.1.1",
-  "description": "Recursive camel casing of object property names with proper typing",
+  "description": "Recursive camel casing and snake casing of object property names with proper typing",
   "type": "module",
   "main": "./dist/index.js",
   "exports": "./dist/index.js",
@@ -20,15 +20,18 @@
     "build": "tsc",
     "prepublishOnly": "npm run build"
   },
-  "repository": "kbrabrand/camelize-ts",
+  "repository": "joundy/camelize-ts",
   "author": {
-    "name": "Kristoffer Brabrand",
-    "email": "kristoffer@brabrand.no",
-    "url": "https://github.com/kbrabrand"
+    "name": "Joundy",
+    "email": "contact@joundy.me",
+    "url": "https://github.com/joundy"
   },
   "license": "MIT",
   "keywords": [
     "camel-case",
+    "snake-case",
+    "snakecase to camelcase transformer typescript",
+    "camelcase to snakecase transformer typescript",
     "json",
     "transform",
     "typescript"
