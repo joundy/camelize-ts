@@ -23,7 +23,7 @@ export type Snakeize<T> = {
       ? Array<Snakeize<U>>
       : T[K]
     : T[K] extends {}
-    ? Camelize<T[K]>
+    ? Snakeize<T[K]>
     : T[K];
 };
 
