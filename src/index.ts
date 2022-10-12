@@ -61,7 +61,7 @@ export function camelize<T>(obj: T): T extends String ? string : Camelize<T> {
     : processWalk(obj, (key) => camelCase(key));
 }
 
-export function snakeize<T>(obj: T): T extends String ? string : Camelize<T> {
+export function snakeize<T>(obj: T): T extends String ? string : Snakeize<T> {
   return typeof obj === "string"
     ? camelCase(obj)
     : processWalk(obj, (key) => snakeCase(key));
