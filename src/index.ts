@@ -55,13 +55,25 @@ function processWalk(obj, fn): any {
   return walk(obj);
 }
 
-export function camelize<T>(obj: T): T extends String ? string : Camelize<T> {
+export function camelize<T>(
+  obj: T
+): T extends String
+  ? string
+  : T extends (infer R)[]
+  ? Camelize<R>[]
+  : Camelize<T> {
   return typeof obj === "string"
     ? camelCase(obj)
     : processWalk(obj, (key) => camelCase(key));
 }
 
-export function snakeize<T>(obj: T): T extends String ? string : Snakeize<T> {
+export function snakeize<T>(
+  obj: T
+): T extends String
+  ? string
+  : T extends (infer R)[]
+  ? Snakeize<R>[]
+  : Snakeize<T> {
   return typeof obj === "string"
     ? camelCase(obj)
     : processWalk(obj, (key) => snakeCase(key));
