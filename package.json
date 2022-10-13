@@ -1,6 +1,6 @@
 {
   "name": "camelize-snakeize-ts",
-  "version": "3.1.1",
+  "version": "3.1.2",
   "description": "Recursive camel casing and snake casing of object property names with proper typing",
   "main": "./dist/index.js",
   "exports": "./dist/index.js",
